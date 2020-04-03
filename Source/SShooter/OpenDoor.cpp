@@ -20,6 +20,8 @@ UOpenDoor::UOpenDoor()
 void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
+
+	GetWorld()->GetFirstPlayerCOntroller
 }
 
 void UOpenDoor::OpenDoor()
