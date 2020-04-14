@@ -45,14 +45,16 @@ private:
 	void SetupInputComponent(); 
 
 	// Return hit for first physics body in reach
-	const FHitResult GetFirstPhysicsBodyInReach(); 
+	const FHitResult GetFirstPhysicsBodyInReach();
+
+	// Returns current start of reach line
+	FVector GetReachLineStart();
+	
+	// Returns current end of reach line 
+	FVector GetReachLineEnd();
+
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
-
-
-		
-	
 };
