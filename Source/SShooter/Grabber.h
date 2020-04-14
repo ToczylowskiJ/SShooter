@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Components/InputComponent.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Grabber.generated.h"
 
@@ -23,6 +25,18 @@ public:
 private:
 	// How far player can reach in CM
 	float Reach = 250.;
+
+	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+
+	UInputComponent* InputComponent = nullptr; 
+
+	// Ray-cast and grab what is in reach
+	void Grab();
+
+	// Called when grab is released 
+	void Release(); 
+
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
