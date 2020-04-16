@@ -39,9 +39,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	/** Fires a projectile. */
-	void OnFire();
-
 public:	
 	// Sets default values for this actor's properties
 	AGun();
@@ -68,6 +65,9 @@ public:
 	/** Animation Instance of the character*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UAnimInstance* AnimInstance; 
+
+	/** Fires a projectile. */
+	void OnFire();
 
 	
 	
