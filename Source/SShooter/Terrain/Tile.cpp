@@ -5,6 +5,7 @@
 #include "GameFramework/Actor.h"
 #include "DrawDebugHelpers.h"
 
+
 // Sets default values
 ATile::ATile()
 {
@@ -61,6 +62,7 @@ void ATile::PlaceActor(TSubclassOf<AActor> ToSpawn, FVector SpawnPoint, float Ro
 void ATile::BeginPlay()
 {
 	Super::BeginPlay();
+
 }
 
 // Called every frame
