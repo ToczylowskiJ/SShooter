@@ -15,8 +15,16 @@ class SSHOOTER_API AInfiniteTerrainGameMode : public ASShooterGameMode
 	GENERATED_BODY()
 	
 public: 
+	AInfiniteTerrainGameMode();
+
+
 	UFUNCTION(BlueprintCallable, Category = "Bounds Pool")
 	void PopulatedBoundsVolumePool(); 
+
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Pool")
+	class UActorPool* NavMeshBoundsVolumePool; 
+
 
 private:
 	void AddToPool(class AVolume *VolumeToAdd);
